@@ -15,7 +15,7 @@ function App() {
   let [scale, setscale] = React.useState(1);
   let [showThumbnails, setShowThumbnails] = React.useState(false);
   let [overlayActive, setOverlayActive] = React.useState(false);
-  var numberOfPages = 12; //Input length of book
+  var numberOfPages = 100; //Input length of book
   
   // Default position of the flipbook.
   const [draggablePos, setdraggablePos] = React.useState({ x: 0, y: 0 });
@@ -73,7 +73,7 @@ function App() {
             >
               <HTMLFlipBook
                 width={700}
-                height={950}
+                height={1000}
                 ref={bookRef}
                 showCover={true}
                 className="flip-book"
@@ -81,13 +81,15 @@ function App() {
                 size="stretch"
                 minHeight={500}
                 minWidth={200}
+                style={{ marginTop: "15px"}}
                 // swipeDistance={200}
               >
                 {/* Book Cover */}
-                <PageCover image="/images/bookcover.png">BOOK TITLE</PageCover>
+                <PageCover image="/images/cover_final.png">BOOK TITLE</PageCover>
                 {/* Rest of the pages */}
                 {[...Array(numberOfPages)].map((_, index) => {
-                  let path = "/images/" + (index+1) + ".jpg" 
+                  let path = "/images/VESCOP Magazine 2023" + (index+2) + ".jpg" 
+           
                   return <Page key={index} image={path} />;
                 })}
               </HTMLFlipBook>
