@@ -15,7 +15,7 @@ function App() {
   let [scale, setscale] = React.useState(1);
   let [showThumbnails, setShowThumbnails] = React.useState(false);
   let [overlayActive, setOverlayActive] = React.useState(false);
-  var numberOfPages = 100; //Input length of book
+  var numberOfPages = 119; //Input length of book
   
   // Default position of the flipbook.
   const [draggablePos, setdraggablePos] = React.useState({ x: 0, y: 0 });
@@ -85,10 +85,10 @@ function App() {
                 // swipeDistance={200}
               >
                 {/* Book Cover */}
-                <PageCover image="/images/cover_final.png">BOOK TITLE</PageCover>
+                <PageCover image="/images/VESCOP Magazine 2023 final clickable_compressed_page-001.jpg">BOOK TITLE</PageCover>
                 {/* Rest of the pages */}
                 {[...Array(numberOfPages)].map((_, index) => {
-                  let path = "/images/VESCOP Magazine 2023" + (index+2) + ".jpg" 
+                  let path = "/images/VESCOP Magazine 2023 final clickable_compressed_page-00" + (index+2) + ".jpg" 
            
                   return <Page key={index} image={path} />;
                 })}
