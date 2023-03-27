@@ -79,9 +79,9 @@ function App() {
                 className="flip-book"
                 flippingTime={900}
                 size="stretch"
-                minHeight={500}
+                minHeight={700}
                 minWidth={200}
-                style={{ marginTop: "15px"}}
+                style={{ marginTop: "10px"}}
                 // swipeDistance={200}
               >
                 {/* Book Cover */}
